@@ -17,8 +17,21 @@ public class FibonacciCalculator {
      * <p>
      * eg: 0,1,1,2,3,5,8,13,21,34,55,89,144
      */
-    public String fibonacciSequence(final Integer n) {
-        return "";
+    public String fibonacciSequence(final int n) {
+        int n1 = 0;
+        int n2 = 1;
+        int soma;
+        String sequencia = n1 + "," + n2;
+
+        int i = 0;
+        while (i < n - 2) {
+            soma = n1 + n2;
+            n1 = n2;
+            n2 = soma;
+            i++;
+            sequencia += "," + soma;
+        }
+        return sequencia;
     }
 
     /**
